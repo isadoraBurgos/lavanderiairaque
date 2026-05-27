@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:paddingHorizontal="20dp"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logoo" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/hamburger" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nossos serviços"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1a4571" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/tshirt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vestuários casuais:"
+                android:layout_marginStart="8dp"
+                android:textColor="#1a4571"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:flexWrap="wrap"
+            > <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camiseta"
+            android:textColor="#1a4571"
+            android:background="@drawable/bg_servico_tag"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blusa"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vestido"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saia"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calça"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <!--        card2-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/business" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vestuarios executivos/finos:"
+                android:layout_marginStart="8dp"
+                android:textColor="#1a4571"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:flexWrap="wrap"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terno"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camisa"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gravata"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sobre tudo"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vestidos"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+        <!--        card3-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/toalha" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vestuarios de casa:"
+                android:layout_marginStart="8dp"
+                android:textColor="#1a4571"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:flexWrap="wrap"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cobertor"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edredom"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roupas de cama"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cortina/Persiana/Painel"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tapete"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toalhas"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <!--        card2-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/socks" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outros:"
+                android:layout_marginStart="8dp"
+                android:textColor="#1a4571"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:flexWrap="wrap"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sapatos"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Couro"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fardas"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Engoma"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vestidos"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tingimento"
+                android:textColor="#1a4571"
+                android:background="@drawable/bg_servico_tag"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Todos tipos de lavagem:"
+            android:layout_marginTop="30dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/lavagens" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:stretchColumns="*">
+
+            <TableRow>
+                <ImageView android:src="@drawable/ic_launcher_background" />
+                <ImageView android:src="@drawable/ic_launcher_background" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E0E0E0"
+            android:padding="20dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/logoo"
+                android:alpha="0.6"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Direitos reservados à Isabella Avelino, Isadora Burgos e Pedro William"
+                android:textSize="8sp"
+                android:textColor="#808080"
+                android:layout_marginTop="5dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

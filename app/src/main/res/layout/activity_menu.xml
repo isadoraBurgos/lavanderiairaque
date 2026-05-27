@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="#FFFFFF">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logoo"
+                android:scaleType="fitStart"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+
+        <!-- Home -->
+        <LinearLayout android:id="@+id/menuHome"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingLeft="24dp" android:paddingRight="24dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🏠" android:textSize="20sp" android:layout_marginRight="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Home" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+        </LinearLayout>
+
+        <!-- Sobre nós -->
+        <LinearLayout android:id="@+id/menuSobreNos"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingLeft="24dp" android:paddingRight="24dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="💬" android:textSize="20sp" android:layout_marginRight="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Sobre nós" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+        </LinearLayout>
+
+        <!-- Serviços -->
+        <LinearLayout android:id="@+id/menuServicos"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingLeft="24dp" android:paddingRight="24dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="⚙️" android:textSize="20sp" android:layout_marginRight="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Serviços" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+        </LinearLayout>
+
+        <!-- Contato -->
+        <LinearLayout android:id="@+id/menuContato"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingLeft="24dp" android:paddingRight="24dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="📋" android:textSize="20sp" android:layout_marginRight="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Contato" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#E0E0E0" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
+
+        <!-- SEÇÃO ADMIN -->
+        <LinearLayout android:id="@+id/secaoAdmin"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="gone">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ADMINISTRAÇÃO" android:textSize="11sp" android:textColor="#888888"
+                android:paddingLeft="24dp" android:paddingRight="24dp" android:paddingTop="8dp" android:paddingBottom="8dp"/>
+
+            <!-- Painel Admin -->
+            <LinearLayout android:id="@+id/menuPainelAdmin"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingLeft="24dp" android:paddingRight="24dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🛡️" android:textSize="20sp" android:layout_marginRight="16dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Painel Admin" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+            </LinearLayout>
+
+            <!-- Usuários -->
+            <LinearLayout android:id="@+id/menuUsuarios"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingLeft="24dp" android:paddingRight="24dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="👤" android:textSize="20sp" android:layout_marginRight="16dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Usuários" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+            </LinearLayout>
+
+            <!-- Admins -->
+            <LinearLayout android:id="@+id/menuAdmins"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingLeft="24dp" android:paddingRight="24dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🔑" android:textSize="20sp" android:layout_marginRight="16dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Admins" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+            </LinearLayout>
+
+            <!-- Pedidos -->
+            <LinearLayout android:id="@+id/menuPedidos"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingLeft="24dp" android:paddingRight="24dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true" android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📦" android:textSize="20sp" android:layout_marginRight="16dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Pedidos" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,29 @@
+package com.example.lavanderiairaque
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
+class EditarAdminActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_editar_admin)
+        val id      = intent.getIntExtra("ADMIN_ID", 0)
+        val etNome  = findViewById<EditText>(R.id.etNomeAdmin)
+        val etEmail = findViewById<EditText>(R.id.etEmailAdmin)
+        etNome.setText(intent.getStringExtra("ADMIN_NOME"))
+        etEmail.setText(intent.getStringExtra("ADMIN_EMAIL"))
+        findViewById<Button>(R.id.btnSalvarAdmin).setOnClickListener {
+            RetrofitClient.apiService.editarAdmin(id, etNome.text.toString(), etEmail.text.toString())
+                .enqueue(object : Callback<Void> {
+                    override fun onResponse(call: Call<Void>, response: Response<Void>) { Toast.makeText(this@EditarAdminActivity, "Atualizado!", Toast.LENGTH_SHORT).show(); finish() }
+                    override fun onFailure(call: Call<Void>, t: Throwable) { Toast.makeText(this@EditarAdminActivity, "Erro", Toast.LENGTH_SHORT).show() }
+                })
+        }
+    }
+}
