@@ -12,14 +12,9 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        // PEGA O VALOR REAL DO LOGIN.
-        // DICA DE TESTE: Se quiser que apareça TUDO para testar, mude temporariamente para: val isAdmin = true
+        val isAdmin = intent.getBooleanExtra("IS_ADMIN", false)
 
-        //val isAdmin = intent.getBooleanExtra("IS_ADMIN", false)
-
-        val isAdmin = true
-
-        // SEÇÃO: BOTÕES PADRÕES (Removido o finish() para permitir voltar ao menu)
+        // ITENS PADRÃO
         findViewById<LinearLayout>(R.id.menuHome).setOnClickListener {
             startActivity(Intent(this, home::class.java))
         }
@@ -32,8 +27,22 @@ class MenuActivity : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.menuContato).setOnClickListener {
             startActivity(Intent(this, contato::class.java))
         }
+        findViewById<LinearLayout>(R.id.menuPacotes).setOnClickListener {
+            val iPacotes = Intent(this, PacotesActivity::class.java)
+            iPacotes.putExtra("IS_ADMIN", isAdmin)
+            startActivity(iPacotes)
+        }
+        findViewById<LinearLayout>(R.id.menuParceriaEmpresas).setOnClickListener {
+            startActivity(Intent(this, ParceriaEmpresa::class.java))
+        }
+        findViewById<LinearLayout>(R.id.menuSolicitarColeta).setOnClickListener {
+            startActivity(Intent(this, SolicitarColeta::class.java))
+        }
+        findViewById<LinearLayout>(R.id.menuMinhaConta).setOnClickListener {
+            startActivity(Intent(this, PerfilConta::class.java))
+        }
 
-        // SEÇÃO: ADMINISTRADOR
+        // SEÇÃO ADMIN
         val secaoAdmin = findViewById<LinearLayout>(R.id.secaoAdmin)
 
         if (isAdmin) {

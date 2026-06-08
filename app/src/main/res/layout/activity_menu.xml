@@ -79,6 +79,58 @@
                 android:text="Contato" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
         </LinearLayout>
 
+        <!-- Pacotes -->
+        <LinearLayout android:id="@+id/menuPacotes"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingLeft="24dp" android:paddingRight="24dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="📦" android:textSize="20sp" android:layout_marginRight="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Pacotes" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+        </LinearLayout>
+
+        <!-- Parceria com empresas -->
+        <LinearLayout android:id="@+id/menuParceriaEmpresas"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingLeft="24dp" android:paddingRight="24dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🤝" android:textSize="20sp" android:layout_marginRight="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Parceria com empresas" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+        </LinearLayout>
+
+        <!-- Solicitar coleta -->
+        <LinearLayout android:id="@+id/menuSolicitarColeta"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingLeft="24dp" android:paddingRight="24dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🚚" android:textSize="20sp" android:layout_marginRight="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Solicitar coleta" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+        </LinearLayout>
+
+        <!-- Minha conta -->
+        <LinearLayout android:id="@+id/menuMinhaConta"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingLeft="24dp" android:paddingRight="24dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true" android:focusable="true">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="👤" android:textSize="20sp" android:layout_marginRight="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Minha conta" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+        </LinearLayout>
+
         <View android:layout_width="match_parent" android:layout_height="1dp"
             android:background="#E0E0E0" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
 
@@ -130,7 +182,7 @@
                     android:text="Admins" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
             </LinearLayout>
 
-            <!-- Pedidos -->
+            <!-- Pedidos Admin -->
             <LinearLayout android:id="@+id/menuPedidos"
                 android:layout_width="match_parent" android:layout_height="56dp"
                 android:orientation="horizontal" android:gravity="center_vertical"
@@ -138,7 +190,7 @@
                 android:background="?attr/selectableItemBackground"
                 android:clickable="true" android:focusable="true">
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:text="📦" android:textSize="20sp" android:layout_marginRight="16dp"/>
+                    android:text="🗂️" android:textSize="20sp" android:layout_marginRight="16dp"/>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="Pedidos" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
             </LinearLayout>

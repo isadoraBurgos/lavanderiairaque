@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -17,6 +18,13 @@ class ParceriaEmpresa : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_parceria_empresa)
+        val isAdmin = intent.getBooleanExtra("IS_ADMIN", false)
+        findViewById<ImageView>(R.id.btnMenu).setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("IS_ADMIN", isAdmin)
+            startActivity(intent)
+        }
+
 
         // 1. Mapeando componentes
         val etNome = findViewById<EditText>(R.id.et_nome_empresa)

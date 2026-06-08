@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lavanderiairaque"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".PacotesActivity"
+            android:exported="false" />
         <activity
             android:name=".EditarConta"
             android:exported="false" />

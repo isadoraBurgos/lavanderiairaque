@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -16,7 +17,14 @@ class ColetaPacote: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_coleta_pacote) // Use o nome do seu XML
+        setContentView(R.layout.activity_coleta_pacote)
+        val isAdmin = intent.getBooleanExtra("IS_ADMIN", false)
+        findViewById<ImageView>(R.id.btnMenu).setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("IS_ADMIN", isAdmin)
+            startActivity(intent)
+        }
+        // Use o nome do seu XML
 
         // 1. Mapeando os componentes do layout
         val etDataHora = findViewById<EditText>(R.id.et_data_hora)

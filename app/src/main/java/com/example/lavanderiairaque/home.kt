@@ -2,6 +2,7 @@ package com.example.lavanderiairaque
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,10 +22,21 @@ class home : AppCompatActivity() {
 
         val isAdmin = intent.getBooleanExtra("IS_ADMIN", false)
 
+        // Botão hamburguer
         findViewById<ImageView>(R.id.btnMenu).setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
             intent.putExtra("IS_ADMIN", isAdmin)
             startActivity(intent)
         }
+
+        // Botões dos cards de pacote → abrem PacotesActivity
+        val abrirPacotes: () -> Unit = {
+            val intent = Intent(this, PacotesActivity::class.java)
+            intent.putExtra("IS_ADMIN", isAdmin)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.btnBasico).setOnClickListener { abrirPacotes() }
+        findViewById<Button>(R.id.btnExecutivo).setOnClickListener { abrirPacotes() }
+        findViewById<Button>(R.id.btnPremium).setOnClickListener { abrirPacotes() }
     }
 }

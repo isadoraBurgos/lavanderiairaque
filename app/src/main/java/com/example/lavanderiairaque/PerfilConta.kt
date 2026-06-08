@@ -1,20 +1,30 @@
 package com.example.lavanderiairaque
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class PerfilConta : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_perfil_conta)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val isAdmin = intent.getBooleanExtra("IS_ADMIN", false)
+
+        // Botão hamburguer → abre o menu
+        findViewById<ImageView>(R.id.btnMenu).setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("IS_ADMIN", isAdmin)
+            startActivity(intent)
+        }
+
+        // Botão Editar → abre tela de edição
+        findViewById<Button>(R.id.btn_ir_para_edicao).setOnClickListener {
+            val intent = Intent(this, EditarConta::class.java)
+            intent.putExtra("IS_ADMIN", isAdmin)
+            startActivity(intent)
         }
     }
 }

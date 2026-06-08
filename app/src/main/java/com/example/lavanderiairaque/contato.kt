@@ -1,6 +1,8 @@
 package com.example.lavanderiairaque
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +17,13 @@ class contato : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val isAdmin = intent.getBooleanExtra("IS_ADMIN", false)
+        findViewById<ImageView>(R.id.btnMenu).setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("IS_ADMIN", isAdmin)
+            startActivity(intent)
         }
     }
 }
