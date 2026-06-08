@@ -13,6 +13,11 @@ class EditarUsuarioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_editar_usuario)
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationIcon(R.drawable.ic_back_arrow)
+        toolbar.setNavigationOnClickListener { finish() }
         val id         = intent.getIntExtra("USUARIO_ID", 0)
         val etNome     = findViewById<EditText>(R.id.etNomeUsuario)
         val etEmail    = findViewById<EditText>(R.id.etEmailUsuario)
@@ -27,5 +32,10 @@ class EditarUsuarioActivity : AppCompatActivity() {
                     override fun onFailure(call: Call<Void>, t: Throwable) { Toast.makeText(this@EditarUsuarioActivity, "Erro", Toast.LENGTH_SHORT).show() }
                 })
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

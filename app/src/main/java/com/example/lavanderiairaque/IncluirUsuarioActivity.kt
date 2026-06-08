@@ -13,6 +13,11 @@ class IncluirUsuarioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_incluir_usuario)
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationIcon(R.drawable.ic_back_arrow)
+        toolbar.setNavigationOnClickListener { finish() }
         val etNome     = findViewById<EditText>(R.id.etNomeUsuario)
         val etEmail    = findViewById<EditText>(R.id.etEmailUsuario)
         val etTelefone = findViewById<EditText>(R.id.etTelefoneUsuario)
@@ -24,5 +29,10 @@ class IncluirUsuarioActivity : AppCompatActivity() {
                     override fun onFailure(call: Call<Void>, t: Throwable) { Toast.makeText(this@IncluirUsuarioActivity, "Erro ao cadastrar", Toast.LENGTH_SHORT).show() }
                 })
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

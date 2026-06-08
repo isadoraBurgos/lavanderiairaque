@@ -19,6 +19,11 @@ class ListarPedidosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listar_pedidos)
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationIcon(R.drawable.ic_back_arrow)
+        toolbar.setNavigationOnClickListener { finish() }
         rv = findViewById(R.id.recyclerViewPedidos)
         rv.layoutManager = LinearLayoutManager(this)
         api = RetrofitClient.apiService
@@ -35,5 +40,10 @@ class ListarPedidosActivity : AppCompatActivity() {
             }
             override fun onFailure(call: Call<List<Pedido>>, t: Throwable) { Log.e("LISTAR_PEDIDO", t.message ?: "") }
         })
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

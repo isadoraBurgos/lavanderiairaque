@@ -19,12 +19,20 @@ class ListarUsuariosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listar_usuarios)
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        toolbar.setNavigationIcon(R.drawable.ic_back_arrow)
         rv = findViewById(R.id.recyclerViewUsuarios)
         rv.layoutManager = LinearLayoutManager(this)
         api = RetrofitClient.apiService
         findViewById<Button>(R.id.btnNovoUsuario).setOnClickListener {
             startActivity(Intent(this, IncluirUsuarioActivity::class.java))
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     override fun onResume() {

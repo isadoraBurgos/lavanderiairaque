@@ -13,6 +13,11 @@ class IncluirPedidoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_incluir_pedido)
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationIcon(R.drawable.ic_back_arrow)
+        toolbar.setNavigationOnClickListener { finish() }
         val etDesc  = findViewById<EditText>(R.id.etDescricaoPedido)
         val etStat  = findViewById<EditText>(R.id.etStatusPedido)
         val etUid   = findViewById<EditText>(R.id.etUsuarioIdPedido)
@@ -23,5 +28,10 @@ class IncluirPedidoActivity : AppCompatActivity() {
                     override fun onFailure(call: Call<Void>, t: Throwable) { Toast.makeText(this@IncluirPedidoActivity, "Erro", Toast.LENGTH_SHORT).show() }
                 })
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

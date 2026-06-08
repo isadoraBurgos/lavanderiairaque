@@ -13,6 +13,11 @@ class EditarPedidoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_editar_pedido)
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationIcon(R.drawable.ic_back_arrow)
+        toolbar.setNavigationOnClickListener { finish() }
         val id     = intent.getIntExtra("PEDIDO_ID", 0)
         val etDesc = findViewById<EditText>(R.id.etDescricaoPedido)
         val etStat = findViewById<EditText>(R.id.etStatusPedido)
@@ -25,5 +30,10 @@ class EditarPedidoActivity : AppCompatActivity() {
                     override fun onFailure(call: Call<Void>, t: Throwable) { Toast.makeText(this@EditarPedidoActivity, "Erro", Toast.LENGTH_SHORT).show() }
                 })
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

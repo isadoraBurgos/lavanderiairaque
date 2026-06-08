@@ -13,6 +13,11 @@ class EditarAdminActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_editar_admin)
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationIcon(R.drawable.ic_back_arrow)
+        toolbar.setNavigationOnClickListener { finish() }
         val id      = intent.getIntExtra("ADMIN_ID", 0)
         val etNome  = findViewById<EditText>(R.id.etNomeAdmin)
         val etEmail = findViewById<EditText>(R.id.etEmailAdmin)
@@ -25,5 +30,10 @@ class EditarAdminActivity : AppCompatActivity() {
                     override fun onFailure(call: Call<Void>, t: Throwable) { Toast.makeText(this@EditarAdminActivity, "Erro", Toast.LENGTH_SHORT).show() }
                 })
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }
